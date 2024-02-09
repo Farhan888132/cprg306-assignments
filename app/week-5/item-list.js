@@ -38,8 +38,8 @@ export default function ItemList() {
               <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
             )) :
             categories.map((category, index) => (
-              <ul>
-                <li className="text-xl capitalize" key={index}>{category}</li>
+              <ul key={index}>
+                <li className="text-xl capitalize" >{category}</li>
                 <li>
 
                   {(items.filter((item) => item.category === category)).map((item) => (
