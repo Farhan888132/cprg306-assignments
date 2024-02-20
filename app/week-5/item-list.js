@@ -26,13 +26,14 @@ export default function ItemList() {
   return (
     <main>
       
-      <div className="">
-        <button className={"p-2 m-2 rounded-lg " + (sortBy === 'name' ? 'bg-red-500' : 'bg-orange-500')} onClick={() => setSortBy('name')}>Name</button>
-        <button className={"p-2 m-2 rounded-lg " + (sortBy === 'category' ? 'bg-red-500' : 'bg-orange-500')} onClick={() => setSortBy('category')}>Category</button>
-        <button className={"p-2 m-2 rounded-lg " + (sortBy === 'Group By Category' ? 'bg-red-500' : 'bg-orange-500')} onClick={() => setSortBy('Group By Category')}>Group By Category</button>
+      <div className="p-2 m-2">
+        Sort By:
+        <button className={"p-2 m-2 rounded-lg " + (sortBy === 'name' ? 'bg-orange-500' : 'bg-orange-700')} onClick={() => setSortBy('name')}>Name</button>
+        <button className={"p-2 m-2 rounded-lg " + (sortBy === 'category' ? 'bg-orange-500' : 'bg-orange-700')} onClick={() => setSortBy('category')}>Category</button>
+        <button className={"p-2 m-2 rounded-lg " + (sortBy === 'Group By Category' ? 'bg-orange-500' : 'bg-orange-700')} onClick={() => setSortBy('Group By Category')}>Grouped Category</button>
       </div>
       
-        
+        <div className='p-2 m-2'>
           {sortBy != 'Group By Category' ? 
             items.map((item) => (
               <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
@@ -49,6 +50,7 @@ export default function ItemList() {
                 </li>
               </ul>
             ))}
+        </div>
 
     </main>
   );
