@@ -37,8 +37,8 @@ export default function ItemList({items, onDelete}) {
           
           {sortBy !== 'Group By Category' ? 
             items.map((item) => (
-              <ul>
-                <li  key={item.id} >
+              <ul key={item.id} >
+                <li>
                 <Item id={item.id} name={item.name} quantity={item.quantity} category={item.category} onDelete={onDelete} />
                 </li>
               </ul>
@@ -48,8 +48,8 @@ export default function ItemList({items, onDelete}) {
                 <li className="text-xl capitalize" >{category}</li>
                 <li>
                   {(items.filter((item) => item.category === category)).sort((a, b) => a.name.localeCompare(b.name)).map((item) => (
-                    <ul>
-                      <li key={item.id} >
+                    <ul key={item.id} >
+                      <li>
                         <Item id={item.id} name={item.name} quantity={item.quantity} category={item.category} onDelete={onDelete} />
                       </li>
                     </ul>                    
