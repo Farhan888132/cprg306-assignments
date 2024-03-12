@@ -11,21 +11,6 @@ export default function Page() {
     const [items, setItems] = useState(itemData);
     const [selectedItem, setSelectedItem] = useState(null);
 
-    const testItems = [
-      {
-        "id": "1h2GJKH12gkHG31h1H",
-        "name": "banana",
-        "quantity": 1,
-        "category": "dairy"
-      },
-      {
-        "id": "2KJH3k2j3H1k2J3K1H",
-        "name": "chicken",
-        "quantity": 2,
-        "category": "bakery"
-      }
-    ]
-
     const addItem = (item) => {
         setItems([...items, item]);
     }
