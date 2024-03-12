@@ -50,7 +50,7 @@ export default function MealIdeas({ingredient})
             <ul>
                 {meals === null ?  <li>{info}</li> :
                 meals.map((meal) => (
-                <div>
+                
                 <li className="  p-1.5 pl-0 w-80 border-b-2 border-black border-opacity-50 hover:bg-orange-100 cursor-pointer" key={meal.idMeal} onClick={() => onMealSelect(meal.idMeal)}>
                     <h2>{meal.strMeal}</h2>
                     {mealIngredients != null &&
@@ -83,7 +83,7 @@ export default function MealIdeas({ingredient})
                       </li>
                     ))}
                 </li>
-                </div>
+                
                 ))}
             </ul>
         </div>
