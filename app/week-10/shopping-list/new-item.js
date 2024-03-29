@@ -9,11 +9,7 @@ export default function NewItem({onAddItem}) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const newId = Math.floor(Math.random() * 1000000);
-
-
         const item = {
-            id: newId,
             name: name,
             quantity: quantity,
             category: category.toLowerCase()

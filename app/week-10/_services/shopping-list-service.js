@@ -6,12 +6,6 @@ export const getItems = async (userId) => {
       const itemsCollectionRef = collection(db, "users", userId, "items");
       const itemsSnapshot = await getDocs(itemsCollectionRef);
   
-    //   const itemsQuery = query(
-    //     itemsCollectionRef,
-    //     where("published", "==", true)
-    //   );
-    //   const blogPostsSnapshot = await getDocs(blogPostsQuery);
-  
       const mappedItems = itemsSnapshot.docs.map((itemsDoc) => ({
         id: itemsDoc.id,
         ...itemsDoc.data(),

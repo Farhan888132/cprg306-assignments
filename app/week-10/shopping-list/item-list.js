@@ -36,8 +36,8 @@ export default function ItemList({items, onDelete, onItemSelect}) {
         <div className='p-2 m-2 text-black'>
           
           {sortBy !== 'Group By Category' ? 
-            items.map((item) => (
-              <ul key={item.id} >
+            items.map((item, index) => (
+              <ul key={index} >
                 <li>
                 <Item id={item.id} name={item.name} quantity={item.quantity} category={item.category} onDelete={onDelete} onSelect={onItemSelect} />
                 </li>

@@ -20,7 +20,6 @@ export default function Page() {
       setItems(items);
     };
 
-    //Add the useEffect hook to the ShoppingList component. The useEffect hook will call the loadItems function when the component is mounted. Determine what the dependencies should be for the useEffect hook.
     useEffect(() => {
       if (user) {
         loadItems();
@@ -28,11 +27,13 @@ export default function Page() {
 
     }, [user]);
 
-    const handleAddItem = (item) => {
-      item.id = addItem(user.uid, item);
+    const handleAddItem =  async (item) => {
+      const itemId =  await addItem(user.uid, item);
+      item.id = itemId;
       setItems([...items, item]);
     }
 
+    //not implemented yet with firestore
     const deleteItem = (id) => {
         setItems(items.filter((item) => item.id !== id));
     }
