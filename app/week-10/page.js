@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <main className="flex justify-center items-center h-screen">
         <div className=" bg-eggshell text-black p-8 rounded-lg w-1/4  flex-rows text-center">
-            <h1 className="mb-10 text-xl font-semibold">Week 8 Assignment</h1>
+            <h1 className="mb-10 text-xl font-semibold">Week 10 Assignment</h1>
             <p className="m-2 text-lg font-semibold">{user ? "Hi there!" : "Please sign in:"}</p>
             <p className="m-2 text-lg font-semibold">{user && user.displayName}</p>
             <p className="m-2 text-lg font-semibold">{user ? "Email: "+user.email : ""}</p>
